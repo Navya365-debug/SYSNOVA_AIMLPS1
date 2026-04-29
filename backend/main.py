@@ -33,7 +33,7 @@ async def lifespan(app: FastAPI):
 
 # Create FastAPI app
 app = FastAPI(
-    title="NeuroQuest API",
+    title="SYSNOVA_AIMLPS1 API",
     description="AI Research Assistant API",
     version="0.1.0",
     lifespan=lifespan,

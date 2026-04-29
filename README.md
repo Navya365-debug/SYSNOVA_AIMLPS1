@@ -1,8 +1,8 @@
-# NeuroQuest
+# SYSNOVA_AIMLPS1
 
 A self-evolving AI research assistant that aggregates papers from arXiv, PubMed, Google Scholar, and the open web — and gets smarter about each user with every session.
 
-## Team: SysNova | Hackathon: Triverse | Domain: AIML
+## Project: SYSNOVA_AIMLPS1 | Team: SysNova | Hackathon: Triverse | Domain: AIML
 
 ## What It Is
 
