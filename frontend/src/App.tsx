@@ -7,11 +7,10 @@ import Navbar from './components/Navbar'
 
 function AppContent() {
   const location = useLocation()
-  const showNavbar = location.pathname !== '/'
 
   return (
     <div className="min-h-screen bg-white">
-      {showNavbar && <Navbar />}
+      <Navbar />
       <main>
         <Routes>
           <Route path="/" element={<SearchPage />} />

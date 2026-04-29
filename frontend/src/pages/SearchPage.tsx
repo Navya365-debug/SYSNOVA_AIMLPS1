@@ -122,25 +122,12 @@ function SearchPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <div className="border-b border-gray-200">
-        <div className="max-w-4xl mx-auto px-4 py-4">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="flex items-center gap-2">
-              <FileText className="h-6 w-6 text-blue-600" />
-              <span className="text-xl font-normal text-gray-700">NeuroQuest</span>
-            </div>
-            <div className="flex-1"></div>
-            <div className="text-sm text-gray-600">
-              <a href="#" className="text-blue-600 hover:underline">My Library</a>
-              <span className="mx-2">|</span>
-              <a href="#" className="text-blue-600 hover:underline">My Alerts</a>
-            </div>
-          </div>
-
+      {/* Search Section */}
+      <div className="border-b border-gray-200 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 py-8">
           {/* Search Bar */}
           <form onSubmit={handleSearch} className="relative">
-            <div className="flex items-center border border-gray-300 rounded-full hover:shadow-md transition-shadow">
+            <div className="flex items-center border border-gray-300 rounded-full hover:shadow-md transition-shadow bg-white">
               <div className="flex-1 flex items-center">
                 <Search className="h-5 w-5 text-gray-400 ml-4" />
                 <input
@@ -176,7 +163,10 @@ function SearchPage() {
               />
               <span>Personalized results</span>
             </label>
-            <a href="#" className="text-blue-600 hover:underline">Advanced search</a>
+            <span className="text-gray-400">|</span>
+            <span className="text-xs text-gray-500">
+              AI-powered research assistant with self-learning capabilities
+            </span>
           </div>
         </div>
       </div>
@@ -280,32 +270,34 @@ function SearchPage() {
         )}
 
         {results.length === 0 && !query && (
-          <div className="text-center py-12">
-            <FileText className="h-16 w-16 text-gray-300 mx-auto mb-4" />
-            <h2 className="text-xl font-normal text-gray-700 mb-2">
-              NeuroQuest AI Research Assistant
-            </h2>
-            <p className="text-gray-600">
-              Search across arXiv, PubMed, and Google Scholar with AI-powered insights
-            </p>
+          <div className="text-center py-16">
+            <div className="max-w-md mx-auto">
+              <div className="bg-blue-50 rounded-full p-6 w-24 h-24 mx-auto mb-6 flex items-center justify-center">
+                <Search className="h-12 w-12 text-blue-600" />
+              </div>
+              <h2 className="text-2xl font-normal text-gray-800 mb-3">
+                Start Your Research Journey
+              </h2>
+              <p className="text-gray-600 mb-6">
+                Search across arXiv, PubMed, and Google Scholar with AI-powered insights and personalized recommendations
+              </p>
+              <div className="flex justify-center gap-4 text-sm">
+                <div className="bg-white border border-gray-200 rounded-lg px-4 py-3">
+                  <div className="font-semibold text-gray-800">Multi-Source</div>
+                  <div className="text-gray-500">arXiv, PubMed, Scholar</div>
+                </div>
+                <div className="bg-white border border-gray-200 rounded-lg px-4 py-3">
+                  <div className="font-semibold text-gray-800">AI-Powered</div>
+                  <div className="text-gray-500">Smart synthesis</div>
+                </div>
+                <div className="bg-white border border-gray-200 rounded-lg px-4 py-3">
+                  <div className="font-semibold text-gray-800">Self-Learning</div>
+                  <div className="text-gray-500">Gets smarter</div>
+                </div>
+              </div>
+            </div>
           </div>
         )}
-      </div>
-
-      {/* Footer */}
-      <div className="border-t border-gray-200 mt-12">
-        <div className="max-w-4xl mx-auto px-4 py-4 text-sm text-gray-600">
-          <div className="flex justify-between items-center">
-            <div>
-              <a href="#" className="text-blue-600 hover:underline mr-4">About</a>
-              <a href="#" className="text-blue-600 hover:underline mr-4">Privacy</a>
-              <a href="#" className="text-blue-600 hover:underline">Terms</a>
-            </div>
-            <div className="text-gray-500">
-              Powered by NVIDIA NIM AI
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   )
